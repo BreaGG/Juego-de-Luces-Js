@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 5px;
+}
+
+.board-button {
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    border: 1px solid #ccc;
+}
+
+.board-button.on {
+    background-color: yellow;
+}
+
+.difficulty {
+    margin-top: 20px;
+}
