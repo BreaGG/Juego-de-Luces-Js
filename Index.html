@@ -10,13 +10,24 @@
 
 <body>
     <div class="header">
-        <h1>Juego de Luces</h1>
-        <p>Autor: ***</p>
+        <h1>Juego de Luces - Alejandro Brea Gascón</h1>
     </div>
     <div class="game-container">
+        <div class="counters">
+            <div>Intentos: <span id="attempts">0</span></div>
+            <div>Tiempo: <span id="timer">0</span> segundos</div>
+        </div>
         <div class="board-container" id="board"></div>
-        <div class="difficulty">
-            <button id="start-button">Iniciar Juego</button>
+        <div>
+            <div>
+                <div class="difficulty">
+                    <label for="difficulty">Dificultad:</label>
+                    <input type="button" value="Fácil" data-rows="5" data-columns="6" data-lights="10">
+                    <input type="button" value="Medio" data-rows="6" data-columns="6" data-lights="6">
+                    <input type="button" value="Difícil" data-rows="10" data-columns="10" data-lights="20">
+                    <input type="button" value="Personalizado" data-custom="true">
+                </div>
+                <button id="start-button">Iniciar Juego</button>
         </div>
     </div>
     <script src="script.js"></script>
