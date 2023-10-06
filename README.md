@@ -1,4 +1,4 @@
-# Juego de Luces - Proyecto de Práctica para Grado
+# Juego de Luces - Proyecto de Práctica para Grado Superior 
 
 Este proyecto es un juego interactivo desarrollado como parte de una práctica para el grado superior de desarrollo de aplicaciones web en el CPR Liceo la Paz. El juego se llama **"Juego de Luces"** y está diseñado para poner a prueba tus habilidades de lógica y resolución de problemas.
 
