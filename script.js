@@ -12,9 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let startTime;
 
     function initializeBoard() {
+        const aspectRatio = 1; // Relación de aspecto para el contenedor cuadrado
+        let adjustedColumns = columns;
+
+        if (rows / columns > aspectRatio) {
+            adjustedColumns = Math.ceil(rows / aspectRatio);
+        } else {
+            rows = Math.ceil(adjustedColumns * aspectRatio);
+        }
+
+        board.style.gridTemplateColumns = `repeat(${adjustedColumns}, 1fr)`;
+
         board.innerHTML = ""; // Limpia el tablero antes de inicializarlo
         for (let i = 0; i < rows; i++) {
-            for (let j = 0; j < columns; j++) {
+            for (let j = 0; j < adjustedColumns; j++) {
                 const button = document.createElement("button");
                 button.className = "board-button";
                 button.addEventListener("click", () => {
@@ -52,8 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].classList.remove("on");
         }
+    
+        const totalButtons = rows * columns;
         for (let i = 0; i < lights; i++) {
-            const randomIndex = Math.floor(Math.random() * (rows * columns));
+            const randomIndex = Math.floor(Math.random() * totalButtons);
             buttons[randomIndex].classList.add("on");
         }
     }

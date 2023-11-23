@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #FFD697;
+    color: #1E1E1E;
 }
 
 .header {
@@ -10,34 +12,38 @@ body {
 
 .game-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-left: 190px;
 }
 
 .board-container {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(6, 50px);
-    grid-template-rows: repeat(6, 50px);
+    grid-template-columns: repeat(6, 70px);
+    grid-template-rows: repeat(6, 70px);
 }
 
 .board-button {
-    width: 50px;
-    height: 50px;
-    background-color: black ;
-    border: 1px solid #ccc;
+    width: 70px;
+    height: 70px;
+    background-color: #723E4E ;
+    border: 1px solid #FFD697;
+    border-radius: 10px;
 }
 
 .board-button.on {
-    background-color: yellow;
+    background-color: #FF8DED;
 }
 
 .difficulty {
     padding: 5px;
-    border: 1px solid #ccc;
     margin-left: 20px;
     margin-top: 40px;
     
+}
+
+.difficulty p {
+    font-weight: bold;
 }
 
 .difficulty-button {
@@ -45,20 +51,27 @@ body {
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: grey;
+    background-color: #C48953;
+    font-weight: bold;
 }
 
 #start-button {
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: green;
+    background-color: #C48953;
     padding: 10px;
     margin-top: 40px;
     margin-left: 20px;
+    font-weight: bold;
 }
 
 .counters {
     margin-right: 20px;
     margin-top: 80px;
+}
+
+
+.counters div {
+    font-weight: bold;
 }
